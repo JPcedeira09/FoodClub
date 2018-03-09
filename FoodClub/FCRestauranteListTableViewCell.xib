@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="FCRestauranteListTableViewCell" customModule="FoodClub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="106.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="vkb-h7-aym">
+                        <rect key="frame" x="219" y="11" width="85" height="85"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="OI4-ii-WS6"/>
+                            <constraint firstAttribute="height" constant="85" id="uRH-Vd-lPY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hamburgueria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKc-Lc-EeP">
+                        <rect key="frame" x="8" y="11" width="203" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29" id="iKJ-bP-qLl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lanches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYs-Jk-1P5">
+                        <rect key="frame" x="8" y="48" width="203" height="15"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4,5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVc-W7-Owt">
+                        <rect key="frame" x="41" y="71" width="170" height="25"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <color key="textColor" red="0.8963589072" green="0.099055640400000006" blue="0.099291779100000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodClubHome" translatesAutoresizingMaskIntoConstraints="NO" id="xGc-cQ-tam">
+                        <rect key="frame" x="8" y="71" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="0oz-NQ-IX4"/>
+                            <constraint firstAttribute="height" constant="25" id="rA7-pr-Cvc"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vkb-h7-aym" firstAttribute="leading" secondItem="AKc-Lc-EeP" secondAttribute="trailing" constant="8" id="60Y-sq-e1T"/>
+                    <constraint firstItem="xGc-cQ-tam" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="79X-YD-Skg"/>
+                    <constraint firstItem="vkb-h7-aym" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="8l1-gC-XRs"/>
+                    <constraint firstItem="vkb-h7-aym" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="D6X-Dr-fXM"/>
+                    <constraint firstItem="vYs-Jk-1P5" firstAttribute="top" secondItem="AKc-Lc-EeP" secondAttribute="bottom" constant="8" id="NVg-Ki-60Z"/>
+                    <constraint firstItem="vYs-Jk-1P5" firstAttribute="leading" secondItem="AKc-Lc-EeP" secondAttribute="leading" id="TCN-Y5-GlX"/>
+                    <constraint firstItem="AVc-W7-Owt" firstAttribute="centerY" secondItem="xGc-cQ-tam" secondAttribute="centerY" id="UCD-PN-okS"/>
+                    <constraint firstItem="vkb-h7-aym" firstAttribute="leading" secondItem="vYs-Jk-1P5" secondAttribute="trailing" constant="8" id="WKb-IB-l0W"/>
+                    <constraint firstItem="AVc-W7-Owt" firstAttribute="top" secondItem="vYs-Jk-1P5" secondAttribute="bottom" constant="8" id="YzD-Un-XwT"/>
+                    <constraint firstItem="vkb-h7-aym" firstAttribute="leading" secondItem="AVc-W7-Owt" secondAttribute="trailing" constant="8" id="c8f-bO-8WV"/>
+                    <constraint firstItem="AKc-Lc-EeP" firstAttribute="top" secondItem="vkb-h7-aym" secondAttribute="top" id="eHc-q5-fNK"/>
+                    <constraint firstItem="vkb-h7-aym" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="ey6-yN-xzu"/>
+                    <constraint firstItem="AVc-W7-Owt" firstAttribute="height" secondItem="xGc-cQ-tam" secondAttribute="height" id="vN6-hX-VNJ"/>
+                    <constraint firstItem="AKc-Lc-EeP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="vdP-Sm-8Tc"/>
+                    <constraint firstItem="AVc-W7-Owt" firstAttribute="leading" secondItem="xGc-cQ-tam" secondAttribute="trailing" constant="8" id="xgD-BM-dOA"/>
+                    <constraint firstItem="xGc-cQ-tam" firstAttribute="bottom" secondItem="vkb-h7-aym" secondAttribute="bottom" id="xvS-un-axB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avaliacao" destination="AVc-W7-Owt" id="fdn-xs-eer"/>
+                <outlet property="categoria" destination="vYs-Jk-1P5" id="UoQ-1b-n3a"/>
+                <outlet property="foto_restaurante" destination="vkb-h7-aym" id="sWD-Tv-Lur"/>
+                <outlet property="nome_restaurante" destination="AKc-Lc-EeP" id="Xya-Ow-D9A"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="85.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="face" width="128" height="128"/>
+        <image name="foodClubHome" width="1562" height="2779"/>
+    </resources>
+</document>

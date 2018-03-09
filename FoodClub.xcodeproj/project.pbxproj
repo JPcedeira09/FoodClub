@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		106229202051FF73007C109C /* FCRestauranteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062291E2051FF73007C109C /* FCRestauranteListTableViewCell.swift */; };
+		106229212051FF73007C109C /* FCRestauranteListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1062291F2051FF73007C109C /* FCRestauranteListTableViewCell.xib */; };
+		10622927205210EE007C109C /* FCPratosListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10622925205210EE007C109C /* FCPratosListTableViewCell.swift */; };
+		10622928205210EE007C109C /* FCPratosListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10622926205210EE007C109C /* FCPratosListTableViewCell.xib */; };
+		10BBC3A1204DB52A00E6538F /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC3A0204DB52A00E6538F /* GenericResponse.swift */; };
+		10BBC3A3204DB53100E6538F /* Cliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC3A2204DB53100E6538F /* Cliente.swift */; };
 		10C5B3AD2048BCF400356501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5B3AC2048BCF400356501 /* AppDelegate.swift */; };
 		10C5B3AF2048BCF400356501 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5B3AE2048BCF400356501 /* ViewController.swift */; };
 		10C5B3B22048BCF400356501 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C5B3B02048BCF400356501 /* Main.storyboard */; };
@@ -14,6 +20,7 @@
 		10C5B3B72048BCF400356501 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C5B3B52048BCF400356501 /* LaunchScreen.storyboard */; };
 		10C5B3C22048BCF400356501 /* FoodClubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5B3C12048BCF400356501 /* FoodClubTests.swift */; };
 		10C5B3CD2048BCF400356501 /* FoodClubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5B3CC2048BCF400356501 /* FoodClubUITests.swift */; };
+		10C5B3DB2048C12E00356501 /* FCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5B3DA2048C12E00356501 /* FCHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1062291E2051FF73007C109C /* FCRestauranteListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRestauranteListTableViewCell.swift; sourceTree = "<group>"; };
+		1062291F2051FF73007C109C /* FCRestauranteListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCRestauranteListTableViewCell.xib; sourceTree = "<group>"; };
+		10622925205210EE007C109C /* FCPratosListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPratosListTableViewCell.swift; sourceTree = "<group>"; };
+		10622926205210EE007C109C /* FCPratosListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCPratosListTableViewCell.xib; sourceTree = "<group>"; };
+		10BBC3A0204DB52A00E6538F /* GenericResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		10BBC3A2204DB53100E6538F /* Cliente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cliente.swift; sourceTree = "<group>"; };
 		10C5B3A92048BCF400356501 /* FoodClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C5B3AC2048BCF400356501 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10C5B3AE2048BCF400356501 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +60,7 @@
 		10C5B3C82048BCF400356501 /* FoodClubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodClubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C5B3CC2048BCF400356501 /* FoodClubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodClubUITests.swift; sourceTree = "<group>"; };
 		10C5B3CE2048BCF400356501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10C5B3DA2048C12E00356501 /* FCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCHomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1062291D2051FEDC007C109C /* FCRestauranteListCell */ = {
+			isa = PBXGroup;
+			children = (
+				1062291E2051FF73007C109C /* FCRestauranteListTableViewCell.swift */,
+				1062291F2051FF73007C109C /* FCRestauranteListTableViewCell.xib */,
+			);
+			name = FCRestauranteListCell;
+			sourceTree = "<group>";
+		};
+		1062292220520F50007C109C /* FCPratosListCell */ = {
+			isa = PBXGroup;
+			children = (
+				10622925205210EE007C109C /* FCPratosListTableViewCell.swift */,
+				10622926205210EE007C109C /* FCPratosListTableViewCell.xib */,
+			);
+			name = FCPratosListCell;
+			sourceTree = "<group>";
+		};
+		10BBC3A4204DB53E00E6538F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				10BBC3A0204DB52A00E6538F /* GenericResponse.swift */,
+				10BBC3A2204DB53100E6538F /* Cliente.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		10C5B3A02048BCF400356501 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +138,16 @@
 		10C5B3AB2048BCF400356501 /* FoodClub */ = {
 			isa = PBXGroup;
 			children = (
+				1062292220520F50007C109C /* FCPratosListCell */,
+				1062291D2051FEDC007C109C /* FCRestauranteListCell */,
+				10BBC3A4204DB53E00E6538F /* Models */,
 				10C5B3AC2048BCF400356501 /* AppDelegate.swift */,
 				10C5B3AE2048BCF400356501 /* ViewController.swift */,
 				10C5B3B02048BCF400356501 /* Main.storyboard */,
 				10C5B3B32048BCF400356501 /* Assets.xcassets */,
 				10C5B3B52048BCF400356501 /* LaunchScreen.storyboard */,
 				10C5B3B82048BCF400356501 /* Info.plist */,
+				10C5B3DA2048C12E00356501 /* FCHomeViewController.swift */,
 			);
 			path = FoodClub;
 			sourceTree = "<group>";
@@ -233,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C5B3B72048BCF400356501 /* LaunchScreen.storyboard in Resources */,
+				10622928205210EE007C109C /* FCPratosListTableViewCell.xib in Resources */,
+				106229212051FF73007C109C /* FCRestauranteListTableViewCell.xib in Resources */,
 				10C5B3B42048BCF400356501 /* Assets.xcassets in Resources */,
 				10C5B3B22048BCF400356501 /* Main.storyboard in Resources */,
 			);
@@ -259,8 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BBC3A1204DB52A00E6538F /* GenericResponse.swift in Sources */,
 				10C5B3AF2048BCF400356501 /* ViewController.swift in Sources */,
+				10622927205210EE007C109C /* FCPratosListTableViewCell.swift in Sources */,
 				10C5B3AD2048BCF400356501 /* AppDelegate.swift in Sources */,
+				10C5B3DB2048C12E00356501 /* FCHomeViewController.swift in Sources */,
+				10BBC3A3204DB53100E6538F /* Cliente.swift in Sources */,
+				106229202051FF73007C109C /* FCRestauranteListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +559,7 @@
 				10C5B3D32048BCF400356501 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		10C5B3D42048BCF400356501 /* Build configuration list for PBXNativeTarget "FoodClubTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +568,7 @@
 				10C5B3D62048BCF400356501 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		10C5B3D72048BCF400356501 /* Build configuration list for PBXNativeTarget "FoodClubUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +577,7 @@
 				10C5B3D92048BCF400356501 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

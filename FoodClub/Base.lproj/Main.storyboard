@@ -1,26 +1,179 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FCHomeViewController" customModule="FoodClub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRp-q7-wek">
+                                <rect key="frame" x="0.0" y="20" width="320" height="290"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodClubHome" translatesAutoresizingMaskIntoConstraints="NO" id="mQR-SP-n2x">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="290"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75701522827148438" green="0.22508031129837036" blue="0.26749294996261597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mQR-SP-n2x" firstAttribute="top" secondItem="lRp-q7-wek" secondAttribute="top" id="IxV-QO-aNW"/>
+                                    <constraint firstAttribute="bottom" secondItem="mQR-SP-n2x" secondAttribute="bottom" id="dg8-sw-RTD"/>
+                                    <constraint firstItem="mQR-SP-n2x" firstAttribute="leading" secondItem="lRp-q7-wek" secondAttribute="leading" id="e1X-tF-rhO"/>
+                                    <constraint firstAttribute="trailing" secondItem="mQR-SP-n2x" secondAttribute="trailing" id="zhF-l7-Tvg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lzt-ji-6G4">
+                                <rect key="frame" x="0.0" y="318" width="320" height="250"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CPF/CNPJ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B6d-bw-FRS">
+                                        <rect key="frame" x="8" y="8" width="304" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="mlp-x2-lfT"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kfX-jB-fP6">
+                                        <rect key="frame" x="8" y="46" width="304" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Gin-8s-aQt"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUr-Ue-ciG">
+                                        <rect key="frame" x="8" y="128.5" width="304" height="36"/>
+                                        <color key="backgroundColor" red="0.25118127465248108" green="0.39620408415794373" blue="0.7075270414352417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Login with Facebook">
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxO-jH-XJs">
+                                        <rect key="frame" x="8" y="84" width="304" height="36.5"/>
+                                        <color key="backgroundColor" red="0.75701522827148438" green="0.22508031129837036" blue="0.26749294996261597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Entrar Food Club">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUD-PQ-vu7">
+                                        <rect key="frame" x="8" y="205.5" width="304" height="36.5"/>
+                                        <color key="backgroundColor" red="1" green="0.8212161660194397" blue="0.096920602023601532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Cadastrar no Food Club">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Kp9-cy-zdO" kind="show" id="bkl-Yc-Woy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYB-io-vGf">
+                                        <rect key="frame" x="8" y="172.5" width="304" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="eWc-ek-FAK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Esqueceu sua senha?">
+                                            <color key="titleColor" red="0.47445547580000003" green="0.47454106810000002" blue="0.47445005179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="6HT-Mp-8o6"/>
+                                    <constraint firstItem="kfX-jB-fP6" firstAttribute="leading" secondItem="Lzt-ji-6G4" secondAttribute="leading" constant="8" id="BES-qL-yfz"/>
+                                    <constraint firstItem="vUr-Ue-ciG" firstAttribute="height" secondItem="aUD-PQ-vu7" secondAttribute="height" id="BQr-Qu-Xcm"/>
+                                    <constraint firstItem="uYB-io-vGf" firstAttribute="top" secondItem="vUr-Ue-ciG" secondAttribute="bottom" constant="8" id="CZI-Xa-i2S"/>
+                                    <constraint firstAttribute="trailing" secondItem="aUD-PQ-vu7" secondAttribute="trailing" constant="8" id="HFP-An-RRk"/>
+                                    <constraint firstItem="kfX-jB-fP6" firstAttribute="top" secondItem="B6d-bw-FRS" secondAttribute="bottom" constant="8" id="Ken-MW-S7M"/>
+                                    <constraint firstAttribute="trailing" secondItem="vUr-Ue-ciG" secondAttribute="trailing" constant="8" id="Lto-m7-mAt"/>
+                                    <constraint firstItem="B6d-bw-FRS" firstAttribute="top" secondItem="Lzt-ji-6G4" secondAttribute="top" constant="8" id="S1h-fp-y4i"/>
+                                    <constraint firstAttribute="trailing" secondItem="uYB-io-vGf" secondAttribute="trailing" constant="8" id="Uua-je-jIs"/>
+                                    <constraint firstAttribute="trailing" secondItem="B6d-bw-FRS" secondAttribute="trailing" constant="8" id="WFo-QL-dcF"/>
+                                    <constraint firstItem="vUr-Ue-ciG" firstAttribute="top" secondItem="DxO-jH-XJs" secondAttribute="bottom" constant="8" id="XXj-e8-J4M"/>
+                                    <constraint firstAttribute="trailing" secondItem="DxO-jH-XJs" secondAttribute="trailing" constant="8" id="coq-n7-bTZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="kfX-jB-fP6" secondAttribute="trailing" constant="8" id="dKt-FD-VeB"/>
+                                    <constraint firstItem="DxO-jH-XJs" firstAttribute="top" secondItem="kfX-jB-fP6" secondAttribute="bottom" constant="8" id="fVA-oQ-nqK"/>
+                                    <constraint firstItem="uYB-io-vGf" firstAttribute="leading" secondItem="Lzt-ji-6G4" secondAttribute="leading" constant="8" id="ft8-Dh-9NE"/>
+                                    <constraint firstItem="vUr-Ue-ciG" firstAttribute="leading" secondItem="Lzt-ji-6G4" secondAttribute="leading" constant="8" id="gsa-0W-gnw"/>
+                                    <constraint firstItem="B6d-bw-FRS" firstAttribute="leading" secondItem="Lzt-ji-6G4" secondAttribute="leading" constant="8" id="iR9-Sg-G2R"/>
+                                    <constraint firstItem="aUD-PQ-vu7" firstAttribute="top" secondItem="uYB-io-vGf" secondAttribute="bottom" constant="8" id="kJk-pz-xUr"/>
+                                    <constraint firstAttribute="bottom" secondItem="aUD-PQ-vu7" secondAttribute="bottom" constant="8" id="pHO-4u-G8p"/>
+                                    <constraint firstItem="aUD-PQ-vu7" firstAttribute="leading" secondItem="Lzt-ji-6G4" secondAttribute="leading" constant="8" id="qFV-LL-oVQ"/>
+                                    <constraint firstItem="DxO-jH-XJs" firstAttribute="height" secondItem="vUr-Ue-ciG" secondAttribute="height" id="qPn-Yb-6Pu"/>
+                                    <constraint firstItem="DxO-jH-XJs" firstAttribute="leading" secondItem="Lzt-ji-6G4" secondAttribute="leading" constant="8" id="x6u-lu-RUU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lRp-q7-wek" secondAttribute="trailing" id="DRi-hU-JgO"/>
+                            <constraint firstItem="lRp-q7-wek" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HIS-ho-yup"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lzt-ji-6G4" secondAttribute="bottom" id="WIK-db-JsU"/>
+                            <constraint firstItem="Lzt-ji-6G4" firstAttribute="top" secondItem="lRp-q7-wek" secondAttribute="bottom" constant="8" id="Y7Z-P3-ppc"/>
+                            <constraint firstItem="lRp-q7-wek" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dOz-St-nxm"/>
+                            <constraint firstItem="Lzt-ji-6G4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nPe-uM-IiA"/>
+                            <constraint firstAttribute="trailing" secondItem="Lzt-ji-6G4" secondAttribute="trailing" id="uzR-XB-0ZH"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cadastar" destination="aUD-PQ-vu7" id="ysh-zA-cRY"/>
+                        <outlet property="entrar" destination="DxO-jH-XJs" id="Oll-ak-bXk"/>
+                        <outlet property="facebookEntrar" destination="vUr-Ue-ciG" id="dhP-fI-cqO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="65.625" y="77.112676056338032"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="j63-VX-mkr">
+            <objects>
+                <viewController id="Kp9-cy-zdO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SQ2-6g-YII"/>
+                        <viewControllerLayoutGuide type="bottom" id="5zK-GY-Dp2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hvk-dD-QN4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R0k-V3-4S6">
+                                <rect key="frame" x="16" y="194" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UoK-m7-yG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="995.625" y="76.056338028169009"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="foodClubHome" width="1562" height="2779"/>
+    </resources>
 </document>
