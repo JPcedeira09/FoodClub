@@ -16,6 +16,7 @@ class FCPratosListTableViewCell: UITableViewCell {
     @IBOutlet weak var nota: UILabel!
     @IBOutlet weak var tamanho: UILabel!
     @IBOutlet weak var foto_prato: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

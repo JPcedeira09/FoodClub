@@ -11,6 +11,12 @@
 		106229212051FF73007C109C /* FCRestauranteListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1062291F2051FF73007C109C /* FCRestauranteListTableViewCell.xib */; };
 		10622927205210EE007C109C /* FCPratosListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10622925205210EE007C109C /* FCPratosListTableViewCell.swift */; };
 		10622928205210EE007C109C /* FCPratosListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10622926205210EE007C109C /* FCPratosListTableViewCell.xib */; };
+		1062292D2052C180007C109C /* FCRestaurantesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062292C2052C180007C109C /* FCRestaurantesViewController.swift */; };
+		1062292F2052C2FA007C109C /* Restaurante.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062292E2052C2FA007C109C /* Restaurante.swift */; };
+		106229312056B117007C109C /* FCPratosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106229302056B117007C109C /* FCPratosViewController.swift */; };
+		106229332056B2CB007C109C /* Prato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106229322056B2CB007C109C /* Prato.swift */; };
+		106229362056ED5A007C109C /* FCRedefinirSenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106229352056ED5A007C109C /* FCRedefinirSenhaViewController.swift */; };
+		106229382056FB7C007C109C /* text.json in Resources */ = {isa = PBXBuildFile; fileRef = 106229372056FB7C007C109C /* text.json */; };
 		10BBC3A1204DB52A00E6538F /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC3A0204DB52A00E6538F /* GenericResponse.swift */; };
 		10BBC3A3204DB53100E6538F /* Cliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BBC3A2204DB53100E6538F /* Cliente.swift */; };
 		10C5B3AD2048BCF400356501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5B3AC2048BCF400356501 /* AppDelegate.swift */; };
@@ -45,6 +51,12 @@
 		1062291F2051FF73007C109C /* FCRestauranteListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCRestauranteListTableViewCell.xib; sourceTree = "<group>"; };
 		10622925205210EE007C109C /* FCPratosListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPratosListTableViewCell.swift; sourceTree = "<group>"; };
 		10622926205210EE007C109C /* FCPratosListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCPratosListTableViewCell.xib; sourceTree = "<group>"; };
+		1062292C2052C180007C109C /* FCRestaurantesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRestaurantesViewController.swift; sourceTree = "<group>"; };
+		1062292E2052C2FA007C109C /* Restaurante.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurante.swift; sourceTree = "<group>"; };
+		106229302056B117007C109C /* FCPratosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPratosViewController.swift; sourceTree = "<group>"; };
+		106229322056B2CB007C109C /* Prato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prato.swift; sourceTree = "<group>"; };
+		106229352056ED5A007C109C /* FCRedefinirSenhaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRedefinirSenhaViewController.swift; sourceTree = "<group>"; };
+		106229372056FB7C007C109C /* text.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = text.json; sourceTree = "<group>"; };
 		10BBC3A0204DB52A00E6538F /* GenericResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		10BBC3A2204DB53100E6538F /* Cliente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cliente.swift; sourceTree = "<group>"; };
 		10C5B3A92048BCF400356501 /* FoodClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,11 +118,30 @@
 			name = FCPratosListCell;
 			sourceTree = "<group>";
 		};
+		106229292052C10B007C109C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1062292C2052C180007C109C /* FCRestaurantesViewController.swift */,
+				106229302056B117007C109C /* FCPratosViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		106229342056ED33007C109C /* UtilsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				106229352056ED5A007C109C /* FCRedefinirSenhaViewController.swift */,
+			);
+			name = UtilsControllers;
+			sourceTree = "<group>";
+		};
 		10BBC3A4204DB53E00E6538F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				10BBC3A0204DB52A00E6538F /* GenericResponse.swift */,
 				10BBC3A2204DB53100E6538F /* Cliente.swift */,
+				1062292E2052C2FA007C109C /* Restaurante.swift */,
+				106229322056B2CB007C109C /* Prato.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -138,6 +169,8 @@
 		10C5B3AB2048BCF400356501 /* FoodClub */ = {
 			isa = PBXGroup;
 			children = (
+				106229342056ED33007C109C /* UtilsControllers */,
+				106229292052C10B007C109C /* Controller */,
 				1062292220520F50007C109C /* FCPratosListCell */,
 				1062291D2051FEDC007C109C /* FCRestauranteListCell */,
 				10BBC3A4204DB53E00E6538F /* Models */,
@@ -148,6 +181,7 @@
 				10C5B3B52048BCF400356501 /* LaunchScreen.storyboard */,
 				10C5B3B82048BCF400356501 /* Info.plist */,
 				10C5B3DA2048C12E00356501 /* FCHomeViewController.swift */,
+				106229372056FB7C007C109C /* text.json */,
 			);
 			path = FoodClub;
 			sourceTree = "<group>";
@@ -279,6 +313,7 @@
 			files = (
 				10C5B3B72048BCF400356501 /* LaunchScreen.storyboard in Resources */,
 				10622928205210EE007C109C /* FCPratosListTableViewCell.xib in Resources */,
+				106229382056FB7C007C109C /* text.json in Resources */,
 				106229212051FF73007C109C /* FCRestauranteListTableViewCell.xib in Resources */,
 				10C5B3B42048BCF400356501 /* Assets.xcassets in Resources */,
 				10C5B3B22048BCF400356501 /* Main.storyboard in Resources */,
@@ -308,10 +343,15 @@
 			files = (
 				10BBC3A1204DB52A00E6538F /* GenericResponse.swift in Sources */,
 				10C5B3AF2048BCF400356501 /* ViewController.swift in Sources */,
+				106229362056ED5A007C109C /* FCRedefinirSenhaViewController.swift in Sources */,
 				10622927205210EE007C109C /* FCPratosListTableViewCell.swift in Sources */,
 				10C5B3AD2048BCF400356501 /* AppDelegate.swift in Sources */,
+				106229312056B117007C109C /* FCPratosViewController.swift in Sources */,
 				10C5B3DB2048C12E00356501 /* FCHomeViewController.swift in Sources */,
+				1062292F2052C2FA007C109C /* Restaurante.swift in Sources */,
+				106229332056B2CB007C109C /* Prato.swift in Sources */,
 				10BBC3A3204DB53100E6538F /* Cliente.swift in Sources */,
+				1062292D2052C180007C109C /* FCRestaurantesViewController.swift in Sources */,
 				106229202051FF73007C109C /* FCRestauranteListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
