@@ -19,8 +19,11 @@ class FCPratosViewController: UIViewController {
     var prato3 = Prato(id_cardapio: 1, nome: "salada com frango", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9266")!)
     var prato4 = Prato(id_cardapio: 1, nome: "salada com carne", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9257")!)
         var prato5 = Prato(id_cardapio: 1, nome: "salada com carne", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9259")!)
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        confBar()
         
         let mockpratos = [self.prato1, self.prato2, self.prato3, self.prato4,self.prato5]
         
@@ -36,6 +39,11 @@ class FCPratosViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func confBar(){
+        UITabBar.appearance().isOpaque = false
+        UITabBar.appearance().barTintColor = UIColor.black
+        
+    }
 
     /*
     // MARK: - Navigation

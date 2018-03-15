@@ -38,17 +38,17 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lanches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYs-Jk-1P5">
                         <rect key="frame" x="8" y="48" width="203" height="15"/>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4,5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVc-W7-Owt">
                         <rect key="frame" x="41" y="71" width="170" height="25"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                        <color key="textColor" red="0.8963589072" green="0.099055640400000006" blue="0.099291779100000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="1" green="0.79327303171157837" blue="0.15719285607337952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodClubHome" translatesAutoresizingMaskIntoConstraints="NO" id="xGc-cQ-tam">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="xGc-cQ-tam">
                         <rect key="frame" x="8" y="71" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="0oz-NQ-IX4"/>
@@ -87,6 +87,6 @@
     </objects>
     <resources>
         <image name="face" width="128" height="128"/>
-        <image name="foodClubHome" width="1562" height="2779"/>
+        <image name="star" width="24" height="24"/>
     </resources>
 </document>

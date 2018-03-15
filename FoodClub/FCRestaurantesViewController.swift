@@ -10,15 +10,15 @@ import UIKit
 
 class FCRestaurantesViewController: UIViewController {
     
-    let restaurante1 = Restaurante(CNPJ: "444.444.444-09", nome: "Pacheco Peixes", classificacao: "Frutos do Mar", senha: "123456", telefone: "(11)4232-3142", email: "zup.com.br", entrega: 1, avaliacao: 4.8, imgViewLogo: UIImage(named: "face")!)
+    let restaurante1 = Restaurante(CNPJ: "444.444.444-09", nome: "Pacheco Peixes", classificacao: "Frutos do Mar", senha: "123456", telefone: "(11)4232-3142", email: "zup.com.br", entrega: 1, avaliacao: 4.8, imgViewLogo: #imageLiteral(resourceName: "frutos_do_mar"))
     
-    let restaurante2 = Restaurante(CNPJ: "555.555.555-55", nome: "The Fifties", classificacao: "Lanches", senha: "123456", telefone: "(11)9748-5353", email: "uol.com.br", entrega: 1, avaliacao: 3.8, imgViewLogo: UIImage(named: "face")!)
+    let restaurante2 = Restaurante(CNPJ: "555.555.555-55", nome: "The Fifties", classificacao: "Lanches", senha: "123456", telefone: "(11)9748-5353", email: "uol.com.br", entrega: 1, avaliacao: 3.8, imgViewLogo: #imageLiteral(resourceName: "the_fifties"))
     
-    let restaurante3 = Restaurante(CNPJ: "666.666.999-69", nome: "America", classificacao: "Diversos", senha: "9910798", telefone: "(11)99748-5353", email: "yahool.com.br", entrega: 0, avaliacao: 4.7, imgViewLogo: UIImage(named: "face")!)
+    let restaurante3 = Restaurante(CNPJ: "666.666.999-69", nome: "America", classificacao: "Diversos", senha: "9910798", telefone: "(11)99748-5353", email: "yahool.com.br", entrega: 0, avaliacao: 4.7, imgViewLogo: #imageLiteral(resourceName: "america"))
     
-    let restaurante4 = Restaurante(CNPJ: "111.111.111-11", nome: "Vai de Salada", classificacao: "Fit", senha: "545454", telefone: "(11)99107-2909", email: "gmal.com.br", entrega: 1, avaliacao: 5.0, imgViewLogo: UIImage(named: "face")!)
+    let restaurante4 = Restaurante(CNPJ: "111.111.111-11", nome: "Vai de Salada", classificacao: "Fit", senha: "545454", telefone: "(11)99107-2909", email: "gmal.com.br", entrega: 1, avaliacao: 5.0, imgViewLogo: #imageLiteral(resourceName: "vai_de_salada"))
     
-
+    
     
     @IBOutlet weak var tableViewRestaurantes: UITableView!
     
@@ -27,7 +27,9 @@ class FCRestaurantesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-            let mockRestaurantes = [self.restaurante1, self.restaurante2, self.restaurante3, self.restaurante4]
+        confBar()
+        
+        let mockRestaurantes = [self.restaurante1, self.restaurante2, self.restaurante3, self.restaurante4]
         
         self.restaurantes = mockRestaurantes
         
@@ -42,26 +44,32 @@ class FCRestaurantesViewController: UIViewController {
     }
     
     /*
-    func getStatusEmployee() {
-        let urlRequest = URL(string:  "https://api.taximanager.com.br/v1/taximanager/users)")
+     func getStatusEmployee() {
+     let urlRequest = URL(string:  "https://api.taximanager.com.br/v1/taximanager/users)")
+     
+     // print("\n /n INFO: URL:\(urlRequest)\n /n ")
+     let header = ["Content-Type" : "application/json"]
+     Alamofire.request(urlRequest!, method: HTTPMethod.get,headers : header).responseJSON { (response) in
+     if(response.result.isSuccess){
+     print(response)
+     if let json = response.result.value as? [String : AnyObject]{
+     
+     var restaurantes = json
+     var mbUser: MBUserInside = MBUserInside(from: json)
+     
+     }
+     }else{
+     print("INFO: ERROR ON REQUEST GET Restaurantes - \(response.error?.localizedDescription)")
+     }
+     }
+     }
+     */
+    
+    func confBar(){
+        UITabBar.appearance().isOpaque = false
+        UITabBar.appearance().barTintColor = UIColor.black
         
-        // print("\n /n INFO: URL:\(urlRequest)\n /n ")
-        let header = ["Content-Type" : "application/json"]
-        Alamofire.request(urlRequest!, method: HTTPMethod.get,headers : header).responseJSON { (response) in
-            if(response.result.isSuccess){
-                print(response)
-                if let json = response.result.value as? [String : AnyObject]{
-                    
-                    var restaurantes = json
-                    var mbUser: MBUserInside = MBUserInside(from: json)
-                  
-                    }
-                }else{
-                print("INFO: ERROR ON REQUEST GET Restaurantes - \(response.error?.localizedDescription)")
-            }
-        }
     }
-*/
 }
 
 extension FCRestaurantesViewController : UITableViewDelegate, UITableViewDataSource{
