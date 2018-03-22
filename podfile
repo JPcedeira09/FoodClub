@@ -1,0 +1,28 @@
+# JP Podfile
+# platform :ios, '9.0'
+
+target 'FoodClub' do
+
+  use_frameworks!
+
+  # Pods for FoodClub
+
+  target 'FoodClubTests' do
+
+    inherit! :search_paths
+
+    # Pods for testing FoodClub
+  end
+
+  target 'FoodClubUITests' do
+    inherit! :search_paths
+    # Pods for FoodClub UI Test
+  end
+
+  pod 'Alamofire', '~> 4.5'
+  pod 'TextFieldEffects', '~> 1.4'
+  pod 'SwiftSpinner'
+  pod 'SideMenu', '3.0.1'
+
+
+end

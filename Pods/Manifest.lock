@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.6.0)
+  - SideMenu (3.0.1)
+  - SwiftSpinner (1.5.0)
+  - TextFieldEffects (1.4.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - SideMenu (= 3.0.1)
+  - SwiftSpinner
+  - TextFieldEffects (~> 1.4)
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  SideMenu: f1fe8a4d23c8ae06d5cb18b21be29851d78fd2f2
+  SwiftSpinner: 4c058c7a1d6b444dd2e1d70988ead40783097133
+  TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
+
+PODFILE CHECKSUM: 2c4ed79b887d9ada6e695eed066ec3cbc041e8f7
+
+COCOAPODS: 1.4.0
