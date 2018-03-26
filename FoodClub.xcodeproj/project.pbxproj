@@ -121,6 +121,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		102A0C0720646B100028BBC3 /* FCRestaurante */ = {
+			isa = PBXGroup;
+			children = (
+				1062292C2052C180007C109C /* FCRestaurantesViewController.swift */,
+				106229302056B117007C109C /* FCPratosViewController.swift */,
+			);
+			name = FCRestaurante;
+			sourceTree = "<group>";
+		};
 		1062291D2051FEDC007C109C /* FCRestauranteListCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,8 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				10C19ECC20633451007A12FA /* FCCadastro */,
-				1062292C2052C180007C109C /* FCRestaurantesViewController.swift */,
-				106229302056B117007C109C /* FCPratosViewController.swift */,
+				102A0C0720646B100028BBC3 /* FCRestaurante */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
