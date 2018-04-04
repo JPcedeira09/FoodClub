@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodClubHome" translatesAutoresizingMaskIntoConstraints="NO" id="V64-Ml-orB">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.65372246503829956" green="0.23482024669647217" blue="0.27541017532348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="V64-Ml-orB" secondAttribute="bottom" id="9ur-wu-b8O"/>
-                            <constraint firstItem="V64-Ml-orB" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="Hjw-kM-wwx"/>
+                            <constraint firstItem="V64-Ml-orB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="btk-lZ-omi"/>
                             <constraint firstItem="V64-Ml-orB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="qgt-hk-Mjj"/>
                             <constraint firstAttribute="trailing" secondItem="V64-Ml-orB" secondAttribute="trailing" id="vQv-2Y-2lx"/>
                         </constraints>
