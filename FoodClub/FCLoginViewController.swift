@@ -20,13 +20,13 @@ class FCLoginViewController: UIViewController {
     }
     
     @IBAction func btnLogar(_ sender: UIButton) {
+        login(cpf: textCPF.text!, senha: txtSenha.text!)
     }
     
     @IBAction func btnEsqueceu(_ sender: UIButton) {
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
-        login(cpf: textCPF.text!, senha: txtSenha.text!)
     }
     @IBAction func btnCadastro(_ sender: UIButton) {
     }
@@ -35,76 +35,98 @@ class FCLoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func FCAlertSegue(titulo : String , menssagem : String, segue:String){
+        
+        let alertController = UIAlertController(title: titulo, message: menssagem, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { (action:UIAlertAction) in
+            
+            self.performSegue(withIdentifier: segue, sender: nil)}
+        alertController.addAction(action)
+        self.present(alertController, animated: true)
+    }
+    
+    func FCAlert(titulo : String , menssagem : String){
+        
+        let alertController = UIAlertController(title: titulo, message: menssagem, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .destructive) { (action:UIAlertAction) in
+            
+        alertController.addAction(action)
+        self.present(alertController, animated: true)
+    }
+    }
     func login(cpf:String, senha:String){
         
         var cliente = Cliente(cpf: cpf, nome: "", senha: senha, cel: "", telefone: "", email: "")
+        
         let getURL = URL(string: "http://localhost:8080/food2abcapi/rest/login")
         let header = ["Content-Type" : "application/json"]
         let parametros : [String: Any]  =  cliente.toDict(cliente) as [String:Any]
-
+        
         Alamofire.request(getURL!, method: .post, parameters:parametros , encoding: JSONEncoding.default, headers: header).validate(contentType: ["application/json"]).responseJSON {  response in
             
             switch response.result {
             case .success(let data):
                 print(data)
+                self.FCAlertSegue(titulo: "Bem Vindo", menssagem: "Agora você pode pedir comida em um piscar de olhos.", segue: "login")
             case .failure(let error):
                 print(error.localizedDescription)
+                self.FCAlert(titulo: "Opss!", menssagem: "Algo deu errado, tente novamente.")
             }
         }
     }
     
     /*
-    func sendFeedBack( feedback: MBFeedback)-> String{
-        let parametros : [String: Any]  =  feedback.toDict(feedback) as [String:Any]
-        let postURL = URL(string:  "https://api.taximanager.com.br/v1/taximanager/feedback")
-        
-        let header = ["Content-Type" : "application/json",
-                      "Authorization" : MBUser.currentUser?.token ?? ""]
-        
-        Alamofire.request(postURL!, method: .post, parameters:parametros , encoding: JSONEncoding.default, headers: header).validate(contentType: ["application/json"]).responseJSON {  response in
-            
-            SwiftSpinner.hide()
-            
-            switch response.result {
-            case .success(let data):
-                print(data)
-                
-                let feedbackTitle = self.alertSuccessSendFeedbackTitle != "" ? self.alertSuccessSendFeedbackTitle : "Enviada!"
-                let feedbackDescription = self.alertSuccessSendFeedbackDescription != "" ? self.alertSuccessSendFeedbackDescription : "A mensagem foi enviada com sucesso!"
-                
-                let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-                let alertView = SCLAlertView(appearance: appearance)
-                alertView.addButton("Fechar", action: {self.dismiss(animated: true)})
-                alertView.showSuccess(feedbackTitle, subTitle: feedbackDescription)
-                
-                //                alertView.addButton("Second Button") {
-                //                    print("Second button tapped")
-                //                }
-                //                alertView.setDismissBlock {
-                //                    self.dismiss(animated: true)
-                //                }
-                
-            case .failure(let error):
-                print(error.localizedDescription)
-                print("iNFO: error in localizedDescription getBookmarks")
-                
-                if(self.alertFailSendFeedbackTitle == "" || self.alertFailSendFeedbackDescription == ""){
-                    
-                    let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-                    let alertView = SCLAlertView(appearance: appearance)
-                    alertView.addButton("Fechar", action: {self.dismiss(animated: true)})
-                    alertView.showError("Falha ao adicionar favorito", subTitle: "Tente mais tarde.")
-                    
-                }else{
-                    
-                    let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-                    let alertView = SCLAlertView(appearance: appearance)
-                    alertView.addButton("Fechar", action: {self.dismiss(animated: true)})
-                    alertView.showError(self.alertFailSendFeedbackTitle, subTitle: self.alertFailSendFeedbackDescription)
-                }
-            }
-        }
-        return feedback.message
-    }*/
+     func sendFeedBack( feedback: MBFeedback)-> String{
+     let parametros : [String: Any]  =  feedback.toDict(feedback) as [String:Any]
+     let postURL = URL(string:  "https://api.taximanager.com.br/v1/taximanager/feedback")
+     
+     let header = ["Content-Type" : "application/json",
+     "Authorization" : MBUser.currentUser?.token ?? ""]
+     
+     Alamofire.request(postURL!, method: .post, parameters:parametros , encoding: JSONEncoding.default, headers: header).validate(contentType: ["application/json"]).responseJSON {  response in
+     
+     SwiftSpinner.hide()
+     
+     switch response.result {
+     case .success(let data):
+     print(data)
+     
+     let feedbackTitle = self.alertSuccessSendFeedbackTitle != "" ? self.alertSuccessSendFeedbackTitle : "Enviada!"
+     let feedbackDescription = self.alertSuccessSendFeedbackDescription != "" ? self.alertSuccessSendFeedbackDescription : "A mensagem foi enviada com sucesso!"
+     
+     let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+     let alertView = SCLAlertView(appearance: appearance)
+     alertView.addButton("Fechar", action: {self.dismiss(animated: true)})
+     alertView.showSuccess(feedbackTitle, subTitle: feedbackDescription)
+     
+     //                alertView.addButton("Second Button") {
+     //                    print("Second button tapped")
+     //                }
+     //                alertView.setDismissBlock {
+     //                    self.dismiss(animated: true)
+     //                }
+     
+     case .failure(let error):
+     print(error.localizedDescription)
+     print("iNFO: error in localizedDescription getBookmarks")
+     
+     if(self.alertFailSendFeedbackTitle == "" || self.alertFailSendFeedbackDescription == ""){
+     
+     let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+     let alertView = SCLAlertView(appearance: appearance)
+     alertView.addButton("Fechar", action: {self.dismiss(animated: true)})
+     alertView.showError("Falha ao adicionar favorito", subTitle: "Tente mais tarde.")
+     
+     }else{
+     
+     let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+     let alertView = SCLAlertView(appearance: appearance)
+     alertView.addButton("Fechar", action: {self.dismiss(animated: true)})
+     alertView.showError(self.alertFailSendFeedbackTitle, subTitle: self.alertFailSendFeedbackDescription)
+     }
+     }
+     }
+     return feedback.message
+     }*/
     
 }

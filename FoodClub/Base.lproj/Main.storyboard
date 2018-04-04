@@ -77,7 +77,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.89800101519999997" green="0.89845472569999996" blue="0.87750619649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xHu-DW-VUq" firstAttribute="top" secondItem="YN5-PM-XCx" secondAttribute="bottom" constant="8" id="0ew-AY-dy7"/>
                             <constraint firstItem="YN5-PM-XCx" firstAttribute="centerX" secondItem="Th5-bd-wb6" secondAttribute="centerX" id="4MV-u8-26a"/>
@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wq6-eW-2jO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3523" y="-60"/>
+            <point key="canvasLocation" x="-4125" y="-123"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -163,9 +163,6 @@
                                         <state key="normal" title="Entrar Food Club">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="nKK-Ku-MZV" kind="show" id="VN1-c6-y5y"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUD-PQ-vu7">
                                         <rect key="frame" x="8" y="205.5" width="304" height="36.5"/>
@@ -174,9 +171,6 @@
                                         <state key="normal" title="Cadastrar no Food Club">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="nqU-yQ-foI" kind="show" id="1pf-N4-4v9"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYB-io-vGf">
                                         <rect key="frame" x="8" y="172.5" width="304" height="25"/>
@@ -187,9 +181,6 @@
                                         <state key="normal" title="Esqueceu sua senha?">
                                             <color key="titleColor" red="0.47445547580000003" green="0.47454106810000002" blue="0.47445005179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="VFT-bK-LoR" kind="show" id="dt8-1e-hRp"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.89800101519999997" green="0.89845472569999996" blue="0.87750619649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -242,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2509" y="-760"/>
+            <point key="canvasLocation" x="-5664" y="-788"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="UQg-o8-U3h">
@@ -298,6 +289,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnEsqueceu:" destination="HqI-yc-hjy" eventType="touchUpInside" id="9q5-T1-DYh"/>
+                                    <segue destination="VFT-bK-LoR" kind="show" id="y63-iS-FVn"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K4T-Ja-3n5">
@@ -346,11 +338,12 @@
                                 </state>
                                 <connections>
                                     <action selector="btnCadastro:" destination="HqI-yc-hjy" eventType="touchUpInside" id="xn0-CB-QA2"/>
+                                    <segue destination="Sky-Fz-kAa" kind="show" id="hPr-x1-3tP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não tem uma conta?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwQ-Hy-KdW">
                                 <rect key="frame" x="16" y="530" width="140" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40362303919999998" green="0.40787170280000001" blue="0.40787170280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -360,7 +353,7 @@
                                 <color key="backgroundColor" red="0.74910080432891846" green="0.22117370367050171" blue="0.26364535093307495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.89800101519999997" green="0.89845472569999996" blue="0.87750619649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qua-8K-yoM" firstAttribute="width" secondItem="JwQ-Hy-KdW" secondAttribute="width" id="0kU-1R-diA"/>
                             <constraint firstItem="hcA-ee-dd8" firstAttribute="top" secondItem="qua-8K-yoM" secondAttribute="bottom" constant="8" id="2ol-SR-4Pg"/>
@@ -403,11 +396,12 @@
                         <outlet property="btnEntrar" destination="ikP-ew-Vqd" id="M3X-kt-2nV"/>
                         <outlet property="textCPF" destination="tK3-pP-vRM" id="Qaq-Wa-45q"/>
                         <outlet property="txtSenha" destination="XpH-IL-ezD" id="yio-lk-Wye"/>
+                        <segue destination="nKK-Ku-MZV" kind="show" identifier="login" id="lEo-0u-3nE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdO-0W-Wz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1637" y="-761"/>
+            <point key="canvasLocation" x="-2874" y="-124"/>
         </scene>
         <!--Cadastrar-->
         <scene sceneID="j63-VX-mkr">
@@ -531,7 +525,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UoK-m7-yG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="PUK-y0-nAN"/>
             </objects>
-            <point key="canvasLocation" x="-3739" y="-2625"/>
+            <point key="canvasLocation" x="-2873" y="-856"/>
         </scene>
         <!--Dados Pessoais View Controller-->
         <scene sceneID="5d3-gZ-IG6">
@@ -618,11 +612,12 @@
                         <outlet property="celular" destination="UbJ-oi-jQo" id="ef6-Vt-VJ6"/>
                         <outlet property="email" destination="X1R-fQ-bvn" id="89n-OQ-cxj"/>
                         <outlet property="telefone" destination="htW-xm-oGa" id="mde-UM-W7I"/>
+                        <segue destination="nKK-Ku-MZV" kind="presentation" id="f8A-Yo-Jxr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8Z-Xt-f2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5426" y="-2625"/>
+            <point key="canvasLocation" x="-1779" y="-856"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="edx-tL-GiA">
@@ -682,7 +677,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwb-b3-jll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2006" y="2219"/>
+            <point key="canvasLocation" x="-1779" y="2217"/>
         </scene>
         <!--Carrinho-->
         <scene sceneID="GpE-d8-bB0">
@@ -742,7 +737,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8B-SS-lAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1213" y="2217"/>
+            <point key="canvasLocation" x="-842" y="2215"/>
         </scene>
         <!--Pratos View Controller-->
         <scene sceneID="Hwm-BO-Aan">
@@ -814,7 +809,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7si-Mm-237" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2873" y="3027"/>
+            <point key="canvasLocation" x="-2874" y="3055"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vum-rT-5Io">
@@ -885,7 +880,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwI-wM-467" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2871" y="3804"/>
+            <point key="canvasLocation" x="-2874" y="3897"/>
         </scene>
         <!--Restaurantes-->
         <scene sceneID="TZe-Sy-uXl">
@@ -957,7 +952,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMM-lO-5Pi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2871" y="2218"/>
+            <point key="canvasLocation" x="-2874" y="2216"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8fl-Cr-V66">
@@ -976,7 +971,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ff-oZ-quu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1779" y="903"/>
+            <point key="canvasLocation" x="-1779" y="901"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="X6p-LP-bLp">
@@ -1036,9 +1031,6 @@
                                     <constraint firstAttribute="height" constant="30" id="SUE-ib-JiA"/>
                                 </constraints>
                                 <state key="normal" title="Sair"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="qPs-sc-pfD"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCc-hh-YBo">
                                 <rect key="frame" x="16" y="138" width="288" height="30"/>
@@ -1105,7 +1097,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vE2-L9-ciU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2873" y="902"/>
+            <point key="canvasLocation" x="-2874" y="902"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="otp-vZ-GgV">
@@ -1123,7 +1115,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSe-yJ-iqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4526" y="-2625"/>
+            <point key="canvasLocation" x="-4125" y="-855"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jzz-kn-DKW">
@@ -1147,9 +1139,6 @@
                                 <state key="normal" title="Sou Restaurante">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Sky-Fz-kAa" kind="show" id="HXU-Un-4g3"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0m-CL-s9w">
                                 <rect key="frame" x="16" y="279.5" width="288" height="10"/>
@@ -1189,7 +1178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyK-gI-XMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2728" y="-1843"/>
+            <point key="canvasLocation" x="-5664" y="-1520"/>
         </scene>
     </scenes>
     <resources>
@@ -1206,6 +1195,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="V7D-U4-JH5"/>
-        <segue reference="VN1-c6-y5y"/>
+        <segue reference="lEo-0u-3nE"/>
     </inferredMetricsTieBreakers>
 </document>
