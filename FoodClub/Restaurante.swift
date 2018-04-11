@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Restaurante {
+struct Restaurante {
     
     var CNPJ:String
     var nome:String

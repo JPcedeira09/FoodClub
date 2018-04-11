@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class FCRestaurantesViewController: UIViewController {
     
@@ -28,6 +30,7 @@ class FCRestaurantesViewController: UIViewController {
         super.viewDidLoad()
         
         confBar()
+        getRestaurantes()
         
         let mockRestaurantes = [self.restaurante1, self.restaurante2, self.restaurante3, self.restaurante4]
         
@@ -43,27 +46,32 @@ class FCRestaurantesViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    /*
-     func getStatusEmployee() {
-     let urlRequest = URL(string:  "https://api.taximanager.com.br/v1/taximanager/users)")
-     
-     // print("\n /n INFO: URL:\(urlRequest)\n /n ")
-     let header = ["Content-Type" : "application/json"]
-     Alamofire.request(urlRequest!, method: HTTPMethod.get,headers : header).responseJSON { (response) in
-     if(response.result.isSuccess){
-     print(response)
-     if let json = response.result.value as? [String : AnyObject]{
-     
-     var restaurantes = json
-     var mbUser: MBUserInside = MBUserInside(from: json)
-     
-     }
-     }else{
-     print("INFO: ERROR ON REQUEST GET Restaurantes - \(response.error?.localizedDescription)")
-     }
-     }
-     }
-     */
+    
+    func getRestaurantes(){
+        let urlRequest = URL(string:  "http://localhost:8080/food2abcapi/rest/listarrest")
+        
+        // print("\n /n INFO: URL:\(urlRequest)\n /n ")
+        let header = ["Content-Type" : "application/json"]
+        Alamofire.request(urlRequest!, method: HTTPMethod.get,headers : header).responseJSON { (response) in
+            if(response.result.isSuccess){
+                print(response)
+                if let json = response.result.value as? [[String : AnyObject]]{
+                    
+                    for response in json {
+                        let restaurnte = Restaurante(serializable: response)
+                        print(restaurnte)
+                    }
+                    // var restaurantes = json
+                    // var mbUser: MBUserInside = MBUserInside(from: json)
+                    
+                }
+            }else{
+                print("INFO: ERROR ON REQUEST GET Restaurantes - \(response.error?.localizedDescription)")
+            }
+            
+        }
+    }
+    
     
     func confBar(){
         UITabBar.appearance().isOpaque = false
