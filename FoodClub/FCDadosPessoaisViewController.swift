@@ -10,6 +10,8 @@ import UIKit
 
 class FCDadosPessoaisViewController: UIViewController {
     
+    var cliente : Cliente?
+
     @IBOutlet weak var telefone: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var celular: UITextField!
@@ -17,6 +19,8 @@ class FCDadosPessoaisViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(cliente)
         
         self.telefone.delegate = self
         self.email.delegate = self

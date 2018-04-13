@@ -9,14 +9,14 @@
 import Foundation
 
 
-class Cliente {
+struct Cliente {
     
-    private var cpf:String
-    private var nome:String
-    private var senha:String
-    private var cel:String
-    private var telefone:String
-    private var email:String
+     var cpf:String
+     var nome:String
+     var senha:String
+     var cel:String
+     var telefone:String
+     var email:String
     
     init(cpf:String,nome:String,senha:String,cel:String,telefone:String,email:String) {
         self.cpf = cpf
