@@ -20,6 +20,9 @@ class FCPratosViewController: UIViewController {
     var prato4 = Prato(id_cardapio: 1, nome: "salada com carne", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9257")!)
         var prato5 = Prato(id_cardapio: 1, nome: "salada com carne", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9259")!)
   
+    @IBAction func dissmisButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,6 +80,11 @@ extension FCPratosViewController : UITableViewDelegate, UITableViewDataSource{
         cell.tamanho.text = "tamanho "+pratosIndex.tamanho
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "segueInfoPrato", sender: nil)
     }
 
 }

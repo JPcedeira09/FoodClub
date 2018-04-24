@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		030DDA172011F3E40A871CE4 /* Pods_FoodClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA500B56F0314C4327DB4F2 /* Pods_FoodClubTests.framework */; };
 		1005048A208E99AF001DB44E /* FCAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10050489208E99AF001DB44E /* FCAlert.swift */; };
+		1005048C208F8F2E001DB44E /* FCPratoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005048B208F8F2E001DB44E /* FCPratoViewController.swift */; };
 		10185FBE20730A8C00A749EF /* FCClienteMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10185FBD20730A8C00A749EF /* FCClienteMenuViewController.swift */; };
 		10185FC020730A9D00A749EF /* FCRestauranteMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10185FBF20730A9D00A749EF /* FCRestauranteMenuViewController.swift */; };
 		101AE80520828EE40009FAF8 /* FCEntregaCadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AE80420828EE40009FAF8 /* FCEntregaCadastroViewController.swift */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		10050489208E99AF001DB44E /* FCAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCAlert.swift; sourceTree = "<group>"; };
+		1005048B208F8F2E001DB44E /* FCPratoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPratoViewController.swift; sourceTree = "<group>"; };
 		10185FBD20730A8C00A749EF /* FCClienteMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCClienteMenuViewController.swift; sourceTree = "<group>"; };
 		10185FBF20730A9D00A749EF /* FCRestauranteMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRestauranteMenuViewController.swift; sourceTree = "<group>"; };
 		101AE80420828EE40009FAF8 /* FCEntregaCadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCEntregaCadastroViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				1062292C2052C180007C109C /* FCRestaurantesViewController.swift */,
 				106229302056B117007C109C /* FCPratosViewController.swift */,
+				1005048B208F8F2E001DB44E /* FCPratoViewController.swift */,
 			);
 			name = FCRestaurante;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1005048C208F8F2E001DB44E /* FCPratoViewController.swift in Sources */,
 				10BBC3A1204DB52A00E6538F /* GenericResponse.swift in Sources */,
 				10C5B3AF2048BCF400356501 /* ViewController.swift in Sources */,
 				10C19ECE20633479007A12FA /* FCDadosPessoaisViewController.swift in Sources */,

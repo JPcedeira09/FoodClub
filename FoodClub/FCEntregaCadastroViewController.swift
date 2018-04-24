@@ -14,6 +14,7 @@ class FCEntregaCadastroViewController: UIViewController {
     
     var cliente:Cliente?
     var fcAlert = FCAlert()
+    var CPF:String = ""
     
     @IBOutlet weak var rua: UITextField!
     @IBOutlet weak var complemento: UITextField!
@@ -55,10 +56,9 @@ class FCEntregaCadastroViewController: UIViewController {
                             cliente?.endereco.bairro = bairro.text!
                             cliente?.endereco.cidade = cidade.text!
                             cliente?.endereco.estado = estado.text!
-                            cliente?.endereco.cpf = (cliente?.cpf)!
+                            cliente?.endereco.cpf = CPF
 
                             print( cliente?.endereco)
-                            
                             self.cadastroCliente(cliente: cliente!)
         }
         print( (cliente?.toDict(cliente!))!)
@@ -68,6 +68,7 @@ class FCEntregaCadastroViewController: UIViewController {
         super.viewDidLoad()
         
         print( (cliente?.endereco)!)
+        CPF = (cliente?.cpf)!
         
         self.rua.delegate = self
         self.complemento.delegate = self
