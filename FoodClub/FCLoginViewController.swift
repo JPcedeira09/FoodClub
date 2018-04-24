@@ -15,16 +15,19 @@ class FCLoginViewController: UIViewController {
     @IBOutlet weak var txtSenha: UITextField!
     @IBOutlet weak var btnEntrar: UIButton!
     
+    var fcAlert = FCAlert()
+    
     /**
      Login Rest
      */
     @IBAction func btnLogar(_ sender: UIButton) {
         if(testTextField(textCPF) == false) {
-            FCAlert(titulo: "Opps!", menssagem:"Preencha o campo CPF, por favor" )
+            
+            fcAlert.FCAlert(titulo: "Opps!", menssagem:"Preencha o campo CPF, por favor", controller: self )
         }else if (testTextField(txtSenha) == false) {
-                FCAlert(titulo: "Opps!", menssagem:"Preencha o campo senha, por favor" )
-            }else{
-                login(cpf: textCPF.text!, senha: txtSenha.text!)
+            fcAlert.FCAlert(titulo: "Opps!", menssagem:"Preencha o campo senha, por favor", controller: self )
+        }else{
+            login(cpf: textCPF.text!, senha: txtSenha.text!)
         }
     }
     
@@ -84,23 +87,6 @@ class FCLoginViewController: UIViewController {
 
 extension FCLoginViewController {
     
-    func FCAlertSegue(titulo : String , menssagem : String, segue:String){
-        
-        let alertController = UIAlertController(title: titulo, message: menssagem, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default) { (action:UIAlertAction) in
-            
-            self.performSegue(withIdentifier: segue, sender: nil)}
-        alertController.addAction(action)
-        self.present(alertController, animated: true)
-    }
-    
-    func FCAlert(titulo : String , menssagem : String){
-        let alertController = UIAlertController(title: titulo, message: menssagem, preferredStyle: .alert)
-        let actionDef = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        alertController.addAction(actionDef)
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
     func testTextField( _ textField:UITextField) -> Bool{
         if textField.text == "" || textField.text == nil {
             return false
@@ -110,7 +96,9 @@ extension FCLoginViewController {
     }
     
     func login(cpf:String, senha:String){
-        var cliente = Cliente(cpf: cpf, nome: "", senha: senha, cel: "", telefone: "", email: "")
+        
+        var endereco = Endereco(id_enderecos: 0, CEP: "", bairro: "", cidade: "", estado: "", cpf: "", rua: "", complemento: "")
+        var cliente = Cliente(cpf: cpf, nome: "", senha: senha, cel: "", telefone: "", email: "",endereco: endereco)
         
         let getURL = URL(string: "http://localhost:8080/food2abcapi/rest/login")
         let header = ["Content-Type" : "application/json"]
@@ -121,10 +109,10 @@ extension FCLoginViewController {
             switch response.result {
             case .success(let data):
                 print(data)
-                self.FCAlertSegue(titulo: "Bem Vindo", menssagem: "Agora você pode pedir comida em um piscar de olhos.", segue: "login")
+                self.fcAlert.FCAlertSegue(titulo: "Bem Vindo", menssagem: "Agora você pode pedir comida em um piscar de olhos.", segue: "login", controller : self)
             case .failure(let error):
                 print(error.localizedDescription)
-                self.FCAlert(titulo: "Opss!", menssagem: "Algo deu errado, tente novamente.")
+                self.fcAlert.FCAlert(titulo: "Opss!", menssagem: "Algo deu errado, tente novamente.", controller: self)
             }
         }
     }

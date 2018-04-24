@@ -17,14 +17,16 @@ struct Cliente {
      var cel:String
      var telefone:String
      var email:String
+     var endereco : Endereco
     
-    init(cpf:String,nome:String,senha:String,cel:String,telefone:String,email:String) {
+    init(cpf:String,nome:String,senha:String,cel:String,telefone:String,email:String, endereco:Endereco) {
         self.cpf = cpf
         self.nome = nome
         self.senha = senha
         self.cel = cel
         self.telefone = telefone
         self.email = email
+        self.endereco = endereco
     }
     
     init(serializable: [String:Any]) {
@@ -35,6 +37,7 @@ struct Cliente {
         self.cel = serializable["cel"] as? String ?? ""
         self.telefone = serializable["telefone"] as? String ?? ""
         self.email = serializable["email"] as? String ?? ""
+        self.endereco = Endereco(serializable: serializable["endereco"] as? [String : Any] ?? [:])
     }
     
     func toDict(_ cliente: Cliente) -> [String:Any]{
@@ -44,7 +47,9 @@ struct Cliente {
                           "senha":cliente.senha,
                           "cel":cliente.cel,
                           "telefone":cliente.telefone,
-                          "email":cliente.email] as [String : Any]
+                          "email":cliente.email,
+                          "endereco": endereco.toDict(cliente.endereco)
+                          ] as [String : Any]
         return parametros
     }
     

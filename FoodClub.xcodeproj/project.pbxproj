@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		030DDA172011F3E40A871CE4 /* Pods_FoodClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA500B56F0314C4327DB4F2 /* Pods_FoodClubTests.framework */; };
+		1005048A208E99AF001DB44E /* FCAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10050489208E99AF001DB44E /* FCAlert.swift */; };
 		10185FBE20730A8C00A749EF /* FCClienteMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10185FBD20730A8C00A749EF /* FCClienteMenuViewController.swift */; };
 		10185FC020730A9D00A749EF /* FCRestauranteMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10185FBF20730A9D00A749EF /* FCRestauranteMenuViewController.swift */; };
+		101AE80520828EE40009FAF8 /* FCEntregaCadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AE80420828EE40009FAF8 /* FCEntregaCadastroViewController.swift */; };
+		101AE807208296930009FAF8 /* Endereco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AE806208296930009FAF8 /* Endereco.swift */; };
 		10400CAC205B32FD00114DAC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10400CAB205B32FD00114DAC /* MenuViewController.swift */; };
 		105E48F62073B3970098DDFC /* FCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105E48F52073B3970098DDFC /* FCLoginViewController.swift */; };
 		106229202051FF73007C109C /* FCRestauranteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062291E2051FF73007C109C /* FCRestauranteListTableViewCell.swift */; };
@@ -56,8 +59,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10050489208E99AF001DB44E /* FCAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCAlert.swift; sourceTree = "<group>"; };
 		10185FBD20730A8C00A749EF /* FCClienteMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCClienteMenuViewController.swift; sourceTree = "<group>"; };
 		10185FBF20730A9D00A749EF /* FCRestauranteMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRestauranteMenuViewController.swift; sourceTree = "<group>"; };
+		101AE80420828EE40009FAF8 /* FCEntregaCadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCEntregaCadastroViewController.swift; sourceTree = "<group>"; };
+		101AE806208296930009FAF8 /* Endereco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endereco.swift; sourceTree = "<group>"; };
 		10400CAB205B32FD00114DAC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		105E48F52073B3970098DDFC /* FCLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCLoginViewController.swift; sourceTree = "<group>"; };
 		1062291E2051FF73007C109C /* FCRestauranteListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRestauranteListTableViewCell.swift; sourceTree = "<group>"; };
@@ -127,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10050488208E9993001DB44E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				10050489208E99AF001DB44E /* FCAlert.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		10185FBA20730A5500A749EF /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +148,14 @@
 				10185FBF20730A9D00A749EF /* FCRestauranteMenuViewController.swift */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		101C36802087FD2F0069B573 /* FCLogin */ = {
+			isa = PBXGroup;
+			children = (
+				105E48F52073B3970098DDFC /* FCLoginViewController.swift */,
+			);
+			name = FCLogin;
 			sourceTree = "<group>";
 		};
 		102A0C0720646B100028BBC3 /* FCRestaurante */ = {
@@ -166,6 +188,7 @@
 		106229292052C10B007C109C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				101C36802087FD2F0069B573 /* FCLogin */,
 				10C19ECC20633451007A12FA /* FCCadastro */,
 				102A0C0720646B100028BBC3 /* FCRestaurante */,
 			);
@@ -188,6 +211,7 @@
 				10BBC3A2204DB53100E6538F /* Cliente.swift */,
 				1062292E2052C2FA007C109C /* Restaurante.swift */,
 				106229322056B2CB007C109C /* Prato.swift */,
+				101AE806208296930009FAF8 /* Endereco.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -197,6 +221,7 @@
 			children = (
 				10C19ECD20633479007A12FA /* FCDadosPessoaisViewController.swift */,
 				10C19ECF206334A5007A12FA /* FCCadastraisViewController.swift */,
+				101AE80420828EE40009FAF8 /* FCEntregaCadastroViewController.swift */,
 			);
 			name = FCCadastro;
 			sourceTree = "<group>";
@@ -226,6 +251,7 @@
 		10C5B3AB2048BCF400356501 /* FoodClub */ = {
 			isa = PBXGroup;
 			children = (
+				10050488208E9993001DB44E /* Utils */,
 				10185FBA20730A5500A749EF /* Menu */,
 				106229342056ED33007C109C /* UtilsControllers */,
 				106229292052C10B007C109C /* Controller */,
@@ -235,7 +261,6 @@
 				10C5B3AC2048BCF400356501 /* AppDelegate.swift */,
 				10C5B3AE2048BCF400356501 /* ViewController.swift */,
 				10C5B3DA2048C12E00356501 /* FCHomeViewController.swift */,
-				105E48F52073B3970098DDFC /* FCLoginViewController.swift */,
 				10C5B3B02048BCF400356501 /* Main.storyboard */,
 				10C5B3B32048BCF400356501 /* Assets.xcassets */,
 				10C5B3B52048BCF400356501 /* LaunchScreen.storyboard */,
@@ -598,12 +623,15 @@
 				106229312056B117007C109C /* FCPratosViewController.swift in Sources */,
 				10185FC020730A9D00A749EF /* FCRestauranteMenuViewController.swift in Sources */,
 				10C5B3DB2048C12E00356501 /* FCHomeViewController.swift in Sources */,
+				101AE807208296930009FAF8 /* Endereco.swift in Sources */,
 				10400CAC205B32FD00114DAC /* MenuViewController.swift in Sources */,
 				105E48F62073B3970098DDFC /* FCLoginViewController.swift in Sources */,
 				1062292F2052C2FA007C109C /* Restaurante.swift in Sources */,
 				106229332056B2CB007C109C /* Prato.swift in Sources */,
 				10C19ED0206334A5007A12FA /* FCCadastraisViewController.swift in Sources */,
+				1005048A208E99AF001DB44E /* FCAlert.swift in Sources */,
 				10BBC3A3204DB53100E6538F /* Cliente.swift in Sources */,
+				101AE80520828EE40009FAF8 /* FCEntregaCadastroViewController.swift in Sources */,
 				1062292D2052C180007C109C /* FCRestaurantesViewController.swift in Sources */,
 				106229202051FF73007C109C /* FCRestauranteListTableViewCell.swift in Sources */,
 			);

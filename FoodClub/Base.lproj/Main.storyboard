@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HqI-yc-hjy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HqI-yc-hjy">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Verdana.ttf">
-            <string>Verdana</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Redefinir Senha View Controller-->
         <scene sceneID="Ajm-Ms-yze">
@@ -547,14 +542,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu telefone" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="htW-xm-oGa">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu email" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="htW-xm-oGa">
                                 <rect key="frame" x="16" y="231" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="vk5-Pc-bpX"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu celular" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UbJ-oi-jQo">
                                 <rect key="frame" x="16" y="307" width="288" height="30"/>
@@ -563,16 +558,16 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu e-mail" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X1R-fQ-bvn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu telefone" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X1R-fQ-bvn">
                                 <rect key="frame" x="16" y="269" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="H96-yN-wT7"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmM-fn-KhQ">
                                 <rect key="frame" x="16" y="515" width="288" height="33"/>
@@ -584,6 +579,9 @@
                                 <state key="normal" title="Proximo">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnProximo:" destination="LEk-b3-IGj" eventType="touchUpInside" id="Buk-vw-VXh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dados de contato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWs-So-Vl2">
                                 <rect key="frame" x="16" y="72" width="288" height="30"/>
@@ -616,19 +614,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastrar" id="xNr-qn-73u">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="back" id="hxG-yD-S3N"/>
+                        <barButtonItem key="leftBarButtonItem" image="back" id="hxG-yD-S3N">
+                            <connections>
+                                <action selector="btnBack:" destination="LEk-b3-IGj" id="anU-Ci-eDo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnCadastrar" destination="lmM-fn-KhQ" id="y8V-5s-pvO"/>
-                        <outlet property="celular" destination="UbJ-oi-jQo" id="ef6-Vt-VJ6"/>
-                        <outlet property="email" destination="X1R-fQ-bvn" id="89n-OQ-cxj"/>
-                        <outlet property="telefone" destination="htW-xm-oGa" id="mde-UM-W7I"/>
-                        <segue destination="RvE-j7-Xkq" kind="show" id="t4H-0v-Thx"/>
+                        <outlet property="btnCadastrar" destination="lmM-fn-KhQ" id="Fla-Sp-i8e"/>
+                        <outlet property="celular" destination="UbJ-oi-jQo" id="btR-yU-To3"/>
+                        <outlet property="email" destination="htW-xm-oGa" id="hO6-li-tpo"/>
+                        <outlet property="telefone" destination="X1R-fQ-bvn" id="573-AA-mDU"/>
+                        <segue destination="RvE-j7-Xkq" kind="show" identifier="entregaProximo" id="ZzX-z1-baV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8Z-Xt-f2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1389" y="-876"/>
+            <point key="canvasLocation" x="-1309" y="-875"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="edx-tL-GiA">
@@ -1042,6 +1044,9 @@
                                     <constraint firstAttribute="height" constant="30" id="SUE-ib-JiA"/>
                                 </constraints>
                                 <state key="normal" title="Sair"/>
+                                <connections>
+                                    <action selector="logout:" destination="wiQ-Dv-j9p" eventType="touchUpInside" id="Zau-26-rMq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCc-hh-YBo">
                                 <rect key="frame" x="16" y="138" width="288" height="30"/>
@@ -1080,6 +1085,7 @@
                     <navigationItem key="navigationItem" id="8UN-6s-2mp"/>
                     <connections>
                         <outlet property="image" destination="ZFy-Ga-cdY" id="W2J-sz-FbW"/>
+                        <segue destination="HqI-yc-hjy" kind="presentation" identifier="logout" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Re2-19-G0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2TP-jl-K8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1108,7 +1114,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vE2-L9-ciU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2874" y="902"/>
+            <point key="canvasLocation" x="-2923" y="967"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="otp-vZ-GgV">
@@ -1194,7 +1200,7 @@
         <!--Cadastrar-->
         <scene sceneID="8bo-Mb-uxX">
             <objects>
-                <viewController id="RvE-j7-Xkq" sceneMemberID="viewController">
+                <viewController id="RvE-j7-Xkq" customClass="FCEntregaCadastroViewController" customModule="FoodClub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oUH-BZ-TBO"/>
                         <viewControllerLayoutGuide type="bottom" id="G4Y-Sa-Z6Y"/>
@@ -1249,6 +1255,9 @@
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnProximo:" destination="RvE-j7-Xkq" eventType="touchUpInside" id="thm-ig-4xR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dados para entrega" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqL-jT-E5o">
                                 <rect key="frame" x="16" y="72" width="288" height="30"/>
@@ -1296,19 +1305,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastrar" id="Hnn-A1-Vjp">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="back" id="uc8-dm-ld8"/>
+                        <barButtonItem key="leftBarButtonItem" image="back" id="uc8-dm-ld8"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnCadastrar" destination="y9S-iF-cxK" id="WYo-MN-l69"/>
-                        <outlet property="celular" destination="ann-Fe-44Q" id="hna-b0-GI9"/>
-                        <outlet property="email" destination="eaH-Ns-s7q" id="6h3-Es-fJ8"/>
-                        <outlet property="telefone" destination="7XT-9O-s7U" id="wqE-y4-2Km"/>
-                        <segue destination="nKK-Ku-MZV" kind="presentation" id="4qN-yb-3z7"/>
+                        <outlet property="bairro" destination="ann-Fe-44Q" id="1aH-jr-eMk"/>
+                        <outlet property="btnCadastrar" destination="y9S-iF-cxK" id="LZv-tV-VgF"/>
+                        <outlet property="cidade" destination="muk-rd-83K" id="BcO-0B-hux"/>
+                        <outlet property="complemento" destination="eaH-Ns-s7q" id="Hz7-e4-XPX"/>
+                        <outlet property="estado" destination="gNC-hz-apP" id="sHs-Du-knq"/>
+                        <outlet property="rua" destination="7XT-9O-s7U" id="HOj-IV-Oaa"/>
+                        <segue destination="nKK-Ku-MZV" kind="presentation" identifier="cadastradoSegue" id="4qN-yb-3z7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWX-ew-caE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-619" y="-876"/>
+            <point key="canvasLocation" x="-474" y="-877"/>
         </scene>
     </scenes>
     <resources>
@@ -1324,7 +1335,7 @@
         <image name="the_fifties" width="496" height="494"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="V7D-U4-JH5"/>
-        <segue reference="lEo-0u-3nE"/>
+        <segue reference="fOh-px-1kO"/>
+        <segue reference="4qN-yb-3z7"/>
     </inferredMetricsTieBreakers>
 </document>

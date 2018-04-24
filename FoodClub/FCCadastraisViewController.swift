@@ -9,33 +9,36 @@
 import UIKit
 
 class FCCadastraisViewController: UIViewController {
-    // TODO
-    var cliente : Cliente?// TODO
-    // TODO
-    @IBOutlet weak var btnProximo: UIButton!// TODO
-    @IBOutlet weak var cpf: UITextField!// TODO
-    @IBOutlet weak var nome: UITextField!// TODO
-    @IBOutlet weak var senha: UITextField!// TODO
-    @IBOutlet weak var confirmaSenha: UITextField!// TODO
-    @IBOutlet weak var viewObj: UIView!// TODO
-    @IBOutlet weak var imageRestaurante: UIImageView!// TODO
-    // TODO// TODO
-    @IBAction func btnProximo(_ sender: UIButton) {// TODO
-        if(testTextField(cpf) == false || testTextFieldCaracteres(cpf, valorMin: 11, valorMax: 15)) {// TODO// TODO
-            FCAlert(titulo: "Opps!", menssagem:"Preencha o seu CPF, de 11 até 15 caracteres, por favor" )// TODO// TODO
-        }else// TODO
+    
+    var cliente : Cliente?
+    var endereco : Endereco?
+    var fcAlert = FCAlert()
+
+    @IBOutlet weak var btnProximo: UIButton!
+    @IBOutlet weak var cpf: UITextField!
+    @IBOutlet weak var nome: UITextField!
+    @IBOutlet weak var senha: UITextField!
+    @IBOutlet weak var confirmaSenha: UITextField!
+    @IBOutlet weak var viewObj: UIView!
+    @IBOutlet weak var imageRestaurante: UIImageView!
+    
+    @IBAction func btnProximo(_ sender: UIButton) {
+
+        if(testTextField(cpf) == false || testTextFieldCaracteres(cpf, valorMin: 11, valorMax: 16)) {
+            self.fcAlert.FCAlert(titulo: "Opps!", menssagem:"Preencha o seu CPF, de 11 até 15 caracteres, por favor", controller: self )
+        }else
             if(testTextField(nome) == false || testTextFieldCaracteres(nome, valorMin: 3, valorMax: 60)) {
-                FCAlert(titulo: "Opps!", menssagem:"Preencha seu nome, de 3 até 60 caracteres, por favor" )
+                self.fcAlert.FCAlert(titulo: "Opps!", menssagem:"Preencha seu nome, de 3 até 60 caracteres, por favor", controller: self )
             }else
                 if(testTextField(senha) == false  || testTextFieldCaracteres(senha, valorMin: 6, valorMax: 8)) {
-                    FCAlert(titulo: "Opps!", menssagem:"Preencha a senha, de 6 até 8 caracteres, por favor" )
+                    self.fcAlert.FCAlert(titulo: "Opps!", menssagem:"Preencha a senha, de 6 até 8 caracteres, por favor", controller: self )
                 }else
                     if(testTextField(confirmaSenha) == false  || testTextFieldCaracteres(confirmaSenha, valorMin: 6, valorMax: 8)) {
-                        FCAlert(titulo: "Opps!", menssagem:"Preencha a confirmação de senha, de 6 até 8 caracteres, por favor" )
-                    }// TODO
+                        self.fcAlert.FCAlert(titulo: "Opps!", menssagem:"Preencha a confirmação de senha, de 6 até 8 caracteres, por favor", controller: self )
+                    }
                     else
                         if(confirmaSenha.text! != senha.text!) {
-                            FCAlert(titulo: "Opps!", menssagem:"Por Favor, Digite Novamente Suas Senhas, Senhas Divergentes" )
+                            self.fcAlert.FCAlert(titulo: "Opps!", menssagem:"Por Favor, Digite Novamente Suas Senhas, Senhas Divergentes", controller: self )
                         }else{
                             cliente?.cpf = cpf.text!
                             cliente?.nome = nome.text!
@@ -43,7 +46,7 @@ class FCCadastraisViewController: UIViewController {
                             
                             performSegue(withIdentifier: "contatoProximo", sender: nil)
         }
-    }// TODO
+    }
     
     func testTextField( _ textField:UITextField) -> Bool{
         if textField.text == "" || textField.text == nil {
@@ -54,16 +57,20 @@ class FCCadastraisViewController: UIViewController {
     }
     
     func testTextFieldCaracteres( _ textField:UITextField, valorMin:Int, valorMax:Int) -> Bool{
-        if ((textField.text?.count)! < valorMin ||  (textField.text?.count)! > valorMax ){
+        if ((textField.text?.count)! > valorMin ||  (textField.text?.count)! < valorMax ){
+            
             return false
+            
         }else{
             return true
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        endereco = Endereco(id_enderecos: 0, CEP: "", bairro: "", cidade: "", estado: "", cpf: "", rua: "", complemento: "")
         
-        cliente = Cliente(cpf: "", nome: "", senha: "", cel: "", telefone: "", email: "")
+        cliente = Cliente(cpf: "", nome: "", senha: "", cel: "", telefone: "", email: "",endereco : endereco!)
         
         viewObj.layer.cornerRadius = viewObj
             .frame.width/2
@@ -112,13 +119,6 @@ class FCCadastraisViewController: UIViewController {
         nome.resignFirstResponder()
         cpf.resignFirstResponder()
         
-    }
-    
-    func FCAlert(titulo : String , menssagem : String){
-        let alertController = UIAlertController(title: titulo, message: menssagem, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        alertController.addAction(defaultAction)
-        self.present(alertController, animated: true, completion: nil)
     }
     
 }
