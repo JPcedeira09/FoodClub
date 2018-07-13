@@ -14,11 +14,11 @@ class FCPratosViewController: UIViewController {
     
     var pratos : [Prato]?
     
-    var prato1 = Prato(id_cardapio: 1, nome: "salada com hamburguer", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9229")!)
-    var prato2 = Prato(id_cardapio: 1, nome: "salada cesar", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9235")!)
-    var prato3 = Prato(id_cardapio: 1, nome: "salada com frango", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9266")!)
-    var prato4 = Prato(id_cardapio: 1, nome: "salada com carne", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9257")!)
-        var prato5 = Prato(id_cardapio: 1, nome: "salada com carne", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9259")!)
+    var prato1 = Prato(id_cardapio: 1, nome: "salada com hamburguer", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9229")!, quantidade: 1)
+    var prato2 = Prato(id_cardapio: 1, nome: "salada cesar", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9235")!, quantidade: 1)
+    var prato3 = Prato(id_cardapio: 1, nome: "salada com frango", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9266")!, quantidade: 1)
+    var prato4 = Prato(id_cardapio: 1, nome: "salada com carne", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9257")!, quantidade: 1)
+        var prato5 = Prato(id_cardapio: 1, nome: "salada com carne", classificacao: "Saladas", preco: 16.90, tamanho: "medio", CNPJ: "333.333.333-90", disponivel: true, nota: 5.0, imgPrato: UIImage(named:"IMG_9259")!, quantidade: 1)
   
     @IBAction func dissmisButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)

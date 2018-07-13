@@ -22,6 +22,9 @@ class FCCadastraisViewController: UIViewController {
     @IBOutlet weak var viewObj: UIView!
     @IBOutlet weak var imageRestaurante: UIImageView!
     
+    @IBAction func dissmissBtn(_ sender: Any) {
+  dismiss(animated: true, completion: nil)
+    }
     @IBAction func btnProximo(_ sender: UIButton) {
 
         if(testTextField(cpf) == false || testTextFieldCaracteres(cpf, valorMin: 11, valorMax: 16)) {

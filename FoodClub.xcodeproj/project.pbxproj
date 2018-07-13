@@ -10,6 +10,9 @@
 		030DDA172011F3E40A871CE4 /* Pods_FoodClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA500B56F0314C4327DB4F2 /* Pods_FoodClubTests.framework */; };
 		1005048A208E99AF001DB44E /* FCAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10050489208E99AF001DB44E /* FCAlert.swift */; };
 		1005048C208F8F2E001DB44E /* FCPratoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005048B208F8F2E001DB44E /* FCPratoViewController.swift */; };
+		100504952090C7BC001DB44E /* FCPedidosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100504932090C7BC001DB44E /* FCPedidosTableViewCell.swift */; };
+		100504962090C7BC001DB44E /* FCPedidosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 100504942090C7BC001DB44E /* FCPedidosTableViewCell.xib */; };
+		100504992090C7D6001DB44E /* FCCarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100504982090C7D6001DB44E /* FCCarrinhoViewController.swift */; };
 		10185FBE20730A8C00A749EF /* FCClienteMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10185FBD20730A8C00A749EF /* FCClienteMenuViewController.swift */; };
 		10185FC020730A9D00A749EF /* FCRestauranteMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10185FBF20730A9D00A749EF /* FCRestauranteMenuViewController.swift */; };
 		101AE80520828EE40009FAF8 /* FCEntregaCadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AE80420828EE40009FAF8 /* FCEntregaCadastroViewController.swift */; };
@@ -62,6 +65,9 @@
 /* Begin PBXFileReference section */
 		10050489208E99AF001DB44E /* FCAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCAlert.swift; sourceTree = "<group>"; };
 		1005048B208F8F2E001DB44E /* FCPratoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPratoViewController.swift; sourceTree = "<group>"; };
+		100504932090C7BC001DB44E /* FCPedidosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPedidosTableViewCell.swift; sourceTree = "<group>"; };
+		100504942090C7BC001DB44E /* FCPedidosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCPedidosTableViewCell.xib; sourceTree = "<group>"; };
+		100504982090C7D6001DB44E /* FCCarrinhoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCCarrinhoViewController.swift; sourceTree = "<group>"; };
 		10185FBD20730A8C00A749EF /* FCClienteMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCClienteMenuViewController.swift; sourceTree = "<group>"; };
 		10185FBF20730A9D00A749EF /* FCRestauranteMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRestauranteMenuViewController.swift; sourceTree = "<group>"; };
 		101AE80420828EE40009FAF8 /* FCEntregaCadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCEntregaCadastroViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +149,24 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		100504922090C72A001DB44E /* FCCarrinho */ = {
+			isa = PBXGroup;
+			children = (
+				100504972090C7C5001DB44E /* FCPedidos */,
+				100504982090C7D6001DB44E /* FCCarrinhoViewController.swift */,
+			);
+			name = FCCarrinho;
+			sourceTree = "<group>";
+		};
+		100504972090C7C5001DB44E /* FCPedidos */ = {
+			isa = PBXGroup;
+			children = (
+				100504932090C7BC001DB44E /* FCPedidosTableViewCell.swift */,
+				100504942090C7BC001DB44E /* FCPedidosTableViewCell.xib */,
+			);
+			name = FCPedidos;
+			sourceTree = "<group>";
+		};
 		10185FBA20730A5500A749EF /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +215,7 @@
 		106229292052C10B007C109C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				100504922090C72A001DB44E /* FCCarrinho */,
 				101C36802087FD2F0069B573 /* FCLogin */,
 				10C19ECC20633451007A12FA /* FCCadastro */,
 				102A0C0720646B100028BBC3 /* FCRestaurante */,
@@ -391,6 +416,7 @@
 				TargetAttributes = {
 					10C5B3A82048BCF400356501 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = SXDL2LW26D;
 						ProvisioningStyle = Automatic;
 					};
 					10C5B3BC2048BCF400356501 = {
@@ -431,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C5B3B72048BCF400356501 /* LaunchScreen.storyboard in Resources */,
+				100504962090C7BC001DB44E /* FCPedidosTableViewCell.xib in Resources */,
 				10622928205210EE007C109C /* FCPratosListTableViewCell.xib in Resources */,
 				106229382056FB7C007C109C /* text.json in Resources */,
 				106229212051FF73007C109C /* FCRestauranteListTableViewCell.xib in Resources */,
@@ -628,8 +655,10 @@
 				10185FC020730A9D00A749EF /* FCRestauranteMenuViewController.swift in Sources */,
 				10C5B3DB2048C12E00356501 /* FCHomeViewController.swift in Sources */,
 				101AE807208296930009FAF8 /* Endereco.swift in Sources */,
+				100504952090C7BC001DB44E /* FCPedidosTableViewCell.swift in Sources */,
 				10400CAC205B32FD00114DAC /* MenuViewController.swift in Sources */,
 				105E48F62073B3970098DDFC /* FCLoginViewController.swift in Sources */,
+				100504992090C7D6001DB44E /* FCCarrinhoViewController.swift in Sources */,
 				1062292F2052C2FA007C109C /* Restaurante.swift in Sources */,
 				106229332056B2CB007C109C /* Prato.swift in Sources */,
 				10C19ED0206334A5007A12FA /* FCCadastraisViewController.swift in Sources */,
@@ -792,11 +821,12 @@
 			baseConfigurationReference = 32038F27AA2F5CD329D4C5A5 /* Pods-FoodClub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SXDL2LW26D;
 				INFOPLIST_FILE = FoodClub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ZUP-I.T.FoodClub";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -805,11 +835,12 @@
 			baseConfigurationReference = D1A983138CEB9F585A58B390 /* Pods-FoodClub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SXDL2LW26D;
 				INFOPLIST_FILE = FoodClub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ZUP-I.T.FoodClub";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

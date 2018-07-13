@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class Prato {
+    
     var id_cardapio:Int
     var nome: String
     var classificacao:String
@@ -19,9 +20,9 @@ class Prato {
     var disponivel: Bool
     var nota:Double
     var imgPrato:UIImage
-
+    var quantidade:UInt
     
-    init(id_cardapio:Int,nome: String, classificacao:String, preco: Double, tamanho:String, CNPJ:String, disponivel: Bool, nota:Double,imgPrato:UIImage) {
+    init(id_cardapio:Int,nome: String, classificacao:String, preco: Double, tamanho:String, CNPJ:String, disponivel: Bool, nota:Double,imgPrato:UIImage,quantidade:UInt) {
         self.id_cardapio = id_cardapio
         self.nome = nome
         self.classificacao = classificacao
@@ -31,6 +32,7 @@ class Prato {
         self.disponivel = disponivel
         self.nota = nota
         self.imgPrato = imgPrato
+        self.quantidade = quantidade
     }
     
 }

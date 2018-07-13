@@ -23,6 +23,7 @@ class FCEntregaCadastroViewController: UIViewController {
     @IBOutlet weak var estado: UITextField!
     @IBOutlet weak var btnCadastrar: UIButton!
     
+    
     @IBAction func btnProximo(_ sender: UIButton) {
         
         if(testTextField(rua) == false || testTextFieldCaracteres(rua, valorMin: 3, valorMax: 150)) {
